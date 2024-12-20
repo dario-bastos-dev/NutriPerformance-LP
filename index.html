@@ -27,8 +27,8 @@
     <main>
       <section id="hero">
         <h1>Transforme sua Saúde e Desempenho Esportivo</h1>
-        <h2>Com Júlia Fonseca, sua Nutricionista Esportiva</h2>
-        <a href="#contato" class="cta-button">Agende sua Consulta</a>
+        <h2 class="bg-green">Com Júlia Fonseca, sua Nutricionista Esportiva</h2>
+        <a href="#contato" class="cta-button bg-green">Agende sua Consulta</a>
       </section>
 
       <section id="sobre">
@@ -60,7 +60,7 @@
       </section>
 
       <section id="servicos">
-        <h2>Meus Serviços</h2>
+        <h2 class="bg-green">Meus Serviços</h2>
         <div class="service-grid">
           <div class="service-card">
             <img
@@ -119,11 +119,13 @@
             <p>Educação nutricional contínua</p>
           </li>
         </ul>
-        <a href="#contato" class="cta-button">Saiba Mais</a>
+        <div class="cta">
+          <a href="#contato" class="cta-button">Agendar consulta</a>
+        </div>
       </section>
 
       <section id="resultados">
-        <h2>Resultados Reais</h2>
+        <h2 class="bg-green">Resultados Reais</h2>
         <div class="results-grid">
           <div class="result-card">
             <img src="antes-depois-1.jpg" alt="Antes e Depois Cliente 1" />
@@ -136,6 +138,9 @@
             <span>Maria, 28 anos</span>
           </div>
           <!-- Adicione mais cards de resultados conforme necessário -->
+        </div>
+        <div class="cta">
+          <a href="#contato" class="cta-button">Agendar consulta</a>
         </div>
       </section>
 
@@ -167,10 +172,13 @@
             <span>Rodrigo Martins, Ciclista</span>
           </div>
         </div>
+        <div class="cta">
+          <a href="#contato" class="cta-button">Agendar consulta</a>
+        </div>
       </section>
 
       <section id="parcerias">
-        <h2>Parcerias e Reconhecimentos</h2>
+        <h2 class="bg-green">Parcerias e Reconhecimentos</h2>
         <div class="partners-grid">
           <img src="logo-academia-1.png" alt="Logo Academia Parceira 1" />
           <img
@@ -212,7 +220,7 @@
       </section>
 
       <section id="faq">
-        <h2>Perguntas Frequentes</h2>
+        <h2 class="bg-green">Perguntas Frequentes</h2>
         <div class="faq-list">
           <details>
             <summary>Quanto tempo leva para ver resultados?</summary>
@@ -237,12 +245,27 @@
               garantindo resultados otimizados.
             </p>
           </details>
-          <!-- Adicione mais perguntas conforme necessário -->
+        </div>
+        <div class="cta">
+          <a href="#contato" class="cta-button">Agendar consulta</a>
         </div>
       </section>
 
       <section id="contato">
-        <h2>Entre em Contato</h2>
+        <div class="contact-info">
+          <h2>Entre em Contato</h2>
+          <ul>
+            <li>
+              <p>julia@nutriesportiva.com</p>
+            </li>
+            <li>
+              <p>(11) 99999-9999</p>
+            </li>
+            <li>
+              <p>Rua da Nutrição, 123 - São Paulo, SP</p>
+            </li>
+          </ul>
+        </div>
         <form>
           <input type="text" name="nome" placeholder="Seu Nome" required />
           <input type="email" name="email" placeholder="Seu E-mail" required />
@@ -254,18 +277,8 @@
             <option value="performance">Melhora de Performance</option>
             <option value="saude-geral">Saúde Geral</option>
           </select>
-          <textarea
-            name="mensagem"
-            placeholder="Sua Mensagem"
-            required
-          ></textarea>
-          <button type="submit" class="cta-button">Enviar Mensagem</button>
+          <button type="submit" class="cta-button bg-green">Enviar Mensagem</button>
         </form>
-        <div class="contact-info">
-          <p>Email: julia@nutriesportiva.com</p>
-          <p>Telefone: (11) 99999-9999</p>
-          <p>Endereço: Rua da Nutrição, 123 - São Paulo, SP</p>
-        </div>
       </section>
     </main>
 
