@@ -30,6 +30,10 @@
     scroll-behavior: smooth;
   }
 
+  section:not(#hero) {
+    clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+  }
+
   h1,
   h2,
   h3 {
@@ -39,6 +43,7 @@
   h2 {
     text-align: center;
     color: var(--color-primary);
+    text-transform: uppercase;
 
     &.bg-green {
       color: var(--color-background);
@@ -57,7 +62,7 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 40px 20px;
   }
 
   .cta {
@@ -84,7 +89,7 @@
 
     &.bg-green:hover {
       transform: translateY(-3px);
-      box-shadow: 9px 9px 15px #359e63, -9px -9px 15px #43c87f;
+      box-shadow: none;
     }
   }
 }
@@ -130,11 +135,11 @@
 
   #hero {
     background: linear-gradient(
-        90deg,
-        rgba(60, 179, 113, 1) 53%,
-        rgba(112, 177, 141, 1) 93%
+        0deg,
+        rgba(60, 179, 113, 0.5) 53%,
+        rgba(112, 177, 141, 0.5) 93%
       ),
-      url("hero-bg.jpg") center/cover no-repeat;
+      url("../img/image\ 8.jpg") center/cover no-repeat;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -171,8 +176,8 @@
     width: 100%;
 
     & .profile-image {
-      width: 200px;
-      border-radius: 50%;
+      width: 300px;
+      border-radius: 0.8rem;
       margin-bottom: 2rem;
     }
   }
@@ -257,6 +262,11 @@
       border-radius: 10px;
       background: #ffffff;
       box-shadow: 9px 9px 25px #d9d9d9, -9px -9px 25px #ffffff;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
 
       .step-number {
         width: 40px;
@@ -340,8 +350,8 @@
     text-align: center;
 
     & img {
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       margin-bottom: 1rem;
     }
@@ -370,7 +380,7 @@
     margin-top: 3rem;
 
     & img {
-      height: 60px;
+      height: 150px;
       filter: grayscale(100%);
       transition: filter 0.3s ease;
 
@@ -490,6 +500,9 @@
       list-style: none;
       li {
         margin-top: 5px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
       }
     }
   }
@@ -501,35 +514,54 @@ footer {
   padding: 3rem 0 1rem;
 
   & .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-self: center;
     gap: 2rem;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    margin: auto;
   }
 
-  & .footer-logo img {
-    height: 40px;
+  a {
+    color: var(--color-background);
+    font-size: 1rem;
   }
 
-  & .footer-links {
-    display: flex;
-    gap: 1rem;
+  & .footer-logo {
+    img {
+      width: 250px;
+    }
 
-    & a {
-      color: var(--color-background);
+    li {
+      width: 250px;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      a > i {
+        font-size: 2rem;
+      }
     }
   }
 
-  & .social-media {
-    display: flex;
-    gap: 1rem;
-
-    & a {
-      color: var(--color-background);
-      font-size: 1.5rem;
+  & .footer-links,
+  & .contact {
+    h3 {
+      margin: 0 0 0.5rem 0;
     }
+
+    li {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  .contact {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-left: 1.1rem;
   }
 
   & p {
@@ -540,28 +572,104 @@ footer {
 }
 
 @layer utilities {
-  .text-center {
-    text-align: center;
-  }
+  /* Tablets e telas médias */
+  @media (max-width: 1024px) {
+    .container {
+      padding: 20px;
+    }
 
-  .mb-1 {
-    margin-bottom: 1rem;
-  }
+    #sobre {
+      grid-template-columns: 1fr;
+      gap: 2rem;
 
-  .mb-2 {
-    margin-bottom: 2rem;
-  }
+      & .bio {
+        width: 90%;
+        text-align: center;
 
-  @media (max-width: 768px) {
-    header nav {
-      flex-direction: column;
+        & .credentials {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+      }
+    }
 
+    #metodologia {
       & ul {
-        margin-top: 1rem;
+        flex-wrap: wrap;
+
+        & li {
+          width: calc(50% - 20px);
+        }
+      }
+    }
+
+    #resultados {
+      & .results-grid {
+        grid-template-columns: 1fr;
+
+        & .result-card {
+          width: 100%;
+          max-width: 500px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    #blog {
+      & .blog-posts {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    #contato {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+
+      & form {
+        width: 90%;
+        max-width: 600px;
+      }
+
+      & .contact-info {
+        text-align: center;
+
+        & h2 {
+          text-align: center;
+        }
+      }
+    }
+
+    footer {
+      & .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+
+        & .footer-logo {
+          grid-column: 1 / -1;
+          justify-self: center;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  /* Dispositivos móveis */
+  @media (max-width: 768px) {
+    header {
+      & nav {
+        height: auto;
+        padding: 1rem;
+
+        & ul {
+          display: none;
+        }
       }
     }
 
     #hero {
+      padding: 0 20px;
+
       & h1 {
         font-size: 2rem;
       }
@@ -571,23 +679,169 @@ footer {
       }
     }
 
-    .service-grid,
-    .results-grid,
-    .blog-posts {
-      grid-template-columns: 1fr;
-    }
-
-    .testimonial-carousel {
-      flex-direction: column;
-      align-items: center;
-
-      & .testimonial {
-        flex: 0 0 100%;
+    #sobre {
+      grid-template-columns: 1fr !important;
+      & .img {
+        & .profile-image {
+          width: 80%;
+          max-width: 300px;
+        }
       }
     }
 
-    #contato form {
-      padding: 0 1rem;
+    #servicos {
+      & .service-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #metodologia {
+      & ul {
+        flex-direction: column;
+
+        & li {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+
+    #resultados {
+      & .results-grid {
+        grid-template-columns: 1fr !important;
+
+        & .result-card {
+          width: 100%;
+          max-width: 500px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    #depoimentos {
+      & .testimonial-carousel {
+        flex-direction: column;
+        gap: 1.5rem;
+
+        & .testimonial {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    #parcerias {
+      & .partners-grid {
+        & img {
+          height: 100px;
+        }
+      }
+    }
+
+    #blog {
+      & .blog-posts {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    #contato {
+      padding-left: 1rem;
+      grid-template-columns: 1fr !important;
+      & form {
+        width: 90% !important;
+        max-width: 600px;
+      }
+
+      .contact-info {
+        h2 {
+          font-size: 28px !important;
+        }
+        text-align: left;
+        margin-top: 3rem;
+
+        & ul {
+          font-size: 18px !important;
+          margin-bottom: 0.5rem;
+          list-style: none;
+          li {
+            margin-top: 5px;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    #faq {
+      & .faq-list {
+        width: 90%;
+      }
+    }
+
+    footer {
+      & .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+        justify-items: center;
+
+        & .footer-links,
+        & .contact {
+          & ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+
+        & .footer-links li {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  /* Dispositivos móveis pequenos */
+  @media (max-width: 480px) {
+    #hero {
+      & h1 {
+        font-size: 1.8rem;
+      }
+
+      & h2 {
+        font-size: 1rem;
+      }
+    }
+
+    #sobre {
+      & .bio {
+        width: 95%;
+      }
+    }
+
+    #contato {
+      & .contact-info {
+        & h2 {
+          font-size: 32px;
+        }
+
+        & ul {
+          font-size: 20px;
+        }
+      }
+
+      & form {
+        width: 95%;
+      }
+    }
+
+    footer {
+      & .footer-logo {
+        & img {
+          width: 200px;
+        }
+      }
     }
   }
 }

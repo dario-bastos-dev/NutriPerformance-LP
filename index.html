@@ -9,11 +9,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/css/styles.css" />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    >
   </head>
   <body>
     <header>
       <nav>
-        <img src="logo.png" alt="Logo Júlia Fonseca Nutrição" class="logo" />
+        <img
+          src="./src/img/Logo-2.png"
+          alt="Logo Júlia Fonseca Nutrição"
+          class="logo"
+        />
         <ul>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#servicos">Serviços</a></li>
@@ -34,7 +41,7 @@
       <section id="sobre">
         <div class="img">
           <img
-            src="julia-fonseca.jpg"
+            src="./src/img/Julia.jpg"
             alt="Júlia Fonseca"
             class="profile-image"
           />
@@ -63,10 +70,7 @@
         <h2 class="bg-green">Meus Serviços</h2>
         <div class="service-grid">
           <div class="service-card">
-            <img
-              src="icon-plano-nutricional.png"
-              alt="Ícone Plano Nutricional"
-            />
+            <img src="./src/img/image 5.svg" alt="Ícone Plano Nutricional" />
             <h3>Plano Nutricional Personalizado</h3>
             <p>
               Desenvolvo um plano alimentar único, alinhado com seus objetivos
@@ -75,7 +79,7 @@
             <a href="#contato" class="cta-button">Saiba Mais</a>
           </div>
           <div class="service-card">
-            <img src="icon-acompanhamento.png" alt="Ícone Acompanhamento" />
+            <img src="./src/img/image 6.svg" alt="Ícone Acompanhamento" />
             <h3>Acompanhamento Nutricional</h3>
             <p>
               Suporte contínuo para ajustar seu plano e garantir resultados
@@ -84,7 +88,7 @@
             <a href="#contato" class="cta-button">Saiba Mais</a>
           </div>
           <div class="service-card">
-            <img src="icon-avaliacao.png" alt="Ícone Avaliação" />
+            <img src="./src/img/image 7.svg" alt="Ícone Avaliação" />
             <h3>Avaliação Física e Nutricional</h3>
             <p>
               Análise completa do seu estado atual para definir as melhores
@@ -128,12 +132,12 @@
         <h2 class="bg-green">Resultados Reais</h2>
         <div class="results-grid">
           <div class="result-card">
-            <img src="antes-depois-1.jpg" alt="Antes e Depois Cliente 1" />
+            <img src="./src/img/Joao.jpg" alt="Antes e Depois Cliente 1" />
             <p>"Perdi 10kg e melhorei meu tempo na corrida!"</p>
             <span>João, 35 anos</span>
           </div>
           <div class="result-card">
-            <img src="antes-depois-2.jpg" alt="Antes e Depois Cliente 2" />
+            <img src="./src/img/Maria.jpg" alt="Antes e Depois Cliente 2" />
             <p>"Ganhei 5kg de massa magra em 3 meses!"</p>
             <span>Maria, 28 anos</span>
           </div>
@@ -148,26 +152,26 @@
         <h2>O Que Meus Clientes Dizem</h2>
         <div class="testimonial-carousel">
           <div class="testimonial">
-            <img src="cliente-1.jpg" alt="Cliente 1" />
+            <img src="./src/img/C.svg" alt="Cliente 1" />
             <p>
-              "A Júlia mudou completamente minha relação com a comida e meu
-              desempenho nos treinos. Recomendo!"
+              A Júlia mudou completamente minha relação com a comida e meu
+              desempenho nos treinos. Recomendo!
             </p>
             <span>Carlos Silva, Triatleta Amador</span>
           </div>
           <div class="testimonial">
-            <img src="cliente-2.jpg" alt="Cliente 2" />
+            <img src="./src/img/A.svg" alt="Cliente 2" />
             <p>
-              "Graças ao plano da Júlia, consegui atingir meu peso ideal e
-              melhorar minha resistência."
+              Graças ao plano da Júlia, consegui atingir meu peso ideal e
+              melhorar minha resistência.
             </p>
             <span>Ana Paula, Corredora</span>
           </div>
           <div class="testimonial">
-            <img src="cliente-3.jpg" alt="Cliente 3" />
+            <img src="./src/img/R.svg" alt="Cliente 3" />
             <p>
-              "Excelente profissional! Adapta o plano às minhas necessidades e
-              sempre está disponível para dúvidas."
+              Excelente profissional! Adapta o plano às minhas necessidades e
+              sempre está disponível para dúvidas.
             </p>
             <span>Rodrigo Martins, Ciclista</span>
           </div>
@@ -180,13 +184,9 @@
       <section id="parcerias">
         <h2 class="bg-green">Parcerias e Reconhecimentos</h2>
         <div class="partners-grid">
-          <img src="logo-academia-1.png" alt="Logo Academia Parceira 1" />
-          <img
-            src="logo-clube-esportivo.png"
-            alt="Logo Clube Esportivo Parceiro"
-          />
-          <img src="logo-revista-nutricao.png" alt="Logo Revista de Nutrição" />
-          <!-- Adicione mais logos conforme necessário -->
+          <img src="./src/img/academia.jpg" alt="Logo Academia Parceira 1" />
+          <img src="./src/img/clube.jpg" alt="Logo Clube Esportivo Parceiro" />
+          <img src="./src/img/revista.jpg" alt="Logo Revista de Nutrição" />
         </div>
       </section>
 
@@ -256,12 +256,15 @@
           <h2>Entre em Contato</h2>
           <ul>
             <li>
+              <i class="ph ph-envelope-simple"></i>
               <p>julia@nutriesportiva.com</p>
             </li>
             <li>
+              <i class="ph ph-whatsapp-logo"></i>
               <p>(11) 99999-9999</p>
             </li>
             <li>
+              <i class="ph ph-map-pin"></i>
               <p>Rua da Nutrição, 123 - São Paulo, SP</p>
             </li>
           </ul>
@@ -277,29 +280,59 @@
             <option value="performance">Melhora de Performance</option>
             <option value="saude-geral">Saúde Geral</option>
           </select>
-          <button type="submit" class="cta-button bg-green">Enviar Mensagem</button>
+          <button type="submit" class="cta-button bg-green">
+            Enviar Mensagem
+          </button>
         </form>
       </section>
     </main>
 
     <footer>
       <div class="footer-content">
-        <div class="footer-logo">
-          <img src="logo.png" alt="Logo Júlia Fonseca Nutrição" />
-        </div>
-        <div class="footer-links">
-          <a href="#sobre">Sobre</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#resultados">Resultados</a>
-          <a href="#contato">Contato</a>
-        </div>
-        <div class="social-media">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-          <a href="#" aria-label="Instagram"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        </div>
+        <ul class="footer-logo">
+          <img src="./src/img/Logo-3.png" alt="Logo Júlia Fonseca Nutrição" />
+          <li>
+            <a href="#" aria-label="Facebook">
+              <i class="ph ph-facebook-logo"></i>
+            </a>
+
+            <a href="#" aria-label="Instagram">
+              <i class="ph ph-instagram-logo"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i class="ph ph-linkedin-logo"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-links">
+          <h3>Navegue</h3>
+          <li>
+            <a href="#sobre">Sobre</a>
+          </li>
+          <li>
+            <a href="#servicos">Serviços</a>
+          </li>
+          <li>
+            <a href="#resultados">Resultados</a>
+          </li>
+          <li>
+            <a href="#contato">Contato</a>
+          </li>
+        </ul>
+        <ul class="contact">
+          <h3>Contato</h3>
+          <li>
+            <i class="ph ph-whatsapp-logo"></i>
+            <a href="tel:11999999999">(99) 9 9999-9999</a>
+          </li>
+          <li>
+            <i class="ph ph-envelope-simple"></i>
+            <a href="mailto:julia@nutriesportiva.com"
+              >julia@nutriesportiva.com</a
+            >
+          </li>
+        </ul>
       </div>
       <p>
         &copy; 2024 Júlia Fonseca Nutrição Esportiva. Todos os direitos
